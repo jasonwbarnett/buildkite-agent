@@ -610,6 +610,9 @@ BUILDKITE_AGENT_JWKS_KEY_ID`
 	if r.conf.AgentConfiguration.GitSkipFetchExistingCommits {
 		setEnv("BUILDKITE_GIT_SKIP_FETCH_EXISTING_COMMITS", "true")
 	}
+	if r.conf.AgentConfiguration.GitFetchBaseBranch {
+		setEnv("BUILDKITE_GIT_FETCH_BASE_BRANCH", "true")
+	}
 	setEnv("BUILDKITE_CHECKOUT_ATTEMPTS", strconv.Itoa(r.conf.AgentConfiguration.CheckoutAttempts))
 	setEnv("BUILDKITE_COMMAND_EVAL", fmt.Sprint(r.conf.AgentConfiguration.CommandEval))
 	setEnv("BUILDKITE_PLUGINS_ENABLED", fmt.Sprint(r.conf.AgentConfiguration.PluginsEnabled))

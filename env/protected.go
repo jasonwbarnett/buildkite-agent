@@ -65,6 +65,7 @@ var protectedEnv = map[string]protection{
 	"BUILDKITE_GIT_CLONE_FLAGS":                 {mutableFromWithinJob: true},
 	"BUILDKITE_GIT_CLONE_MIRROR_FLAGS":          {mutableFromWithinJob: true},
 	"BUILDKITE_GIT_COMMIT_VERIFICATION":         {},
+	"BUILDKITE_GIT_FETCH_BASE_BRANCH":           {mutableFromWithinJob: true},
 	"BUILDKITE_GIT_FETCH_FLAGS":                 {mutableFromWithinJob: true},
 	"BUILDKITE_GIT_MIRRORS_LOCK_TIMEOUT":        {},
 	"BUILDKITE_GIT_MIRRORS_PATH":                {},

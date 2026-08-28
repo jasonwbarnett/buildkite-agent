@@ -90,6 +90,10 @@ type ExecutorConfig struct {
 	// Skip git fetch if the commit already exists locally
 	GitSkipFetchExistingCommits bool `env:"BUILDKITE_GIT_SKIP_FETCH_EXISTING_COMMITS"`
 
+	// Whether to fetch the base branch during checkout, so later commands can diff
+	// against its current tip
+	GitFetchBaseBranch bool `env:"BUILDKITE_GIT_FETCH_BASE_BRANCH"`
+
 	// Timeout in seconds for the git checkout phase (0 means no timeout)
 	GitCheckoutTimeout int `env:"BUILDKITE_GIT_CHECKOUT_TIMEOUT"`
 
